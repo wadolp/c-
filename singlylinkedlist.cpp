@@ -73,5 +73,16 @@ temp->next = newNode;
 void SinglyLinkedList::swapNode(Node *tNode)
 {
 // CODE TO BE ADDED for Project 1...
+Node *temp;
+temp = head;
+if (head == tNode){
+    return;
+}
+while(temp->next != tNode){
+    temp = temp->next;
+}
+temp->next = tNode->next;
+tNode->next = head;
+head = tNode;
 }
 #endif
